@@ -42,7 +42,7 @@ gem 'rack-openid', :require => 'rack/openid'
 gem 'aaronh-chronic', :require => 'chronic' # Fixes for 1.9.2
 gem 'coderay'
 gem 'lesstile'
-gem 'formtastic'
+gem 'formtastic', '~> 2.1.1'
 gem 'will_paginate', '~> 3.0.2'
 gem 'exception_notification', '~> 2.5.2'
 gem 'open_id_authentication'
