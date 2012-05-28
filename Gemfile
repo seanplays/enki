@@ -15,7 +15,7 @@ group :assets do
 end
 
 platforms :ruby do
-  gem 'sqlite3-ruby', :require => 'sqlite3'
+  gem 'pg'
 end
 
 platforms :jruby do
