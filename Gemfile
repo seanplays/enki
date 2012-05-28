@@ -15,8 +15,12 @@ group :assets do
 end
 
 platforms :ruby do
-  gem 'sqlite3-ruby', :require => 'sqlite3'
-  gem 'pg'
+	group :production do
+	  gem 'pg'
+	end
+	group :development, :test do
+	  gem 'sqlite3'
+	end
   gem 'thin'
 end
 
