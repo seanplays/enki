@@ -63,11 +63,11 @@ Enki::Application.configure do
 
 end
 
-# ActionMailer::Base.smtp_settings = {
-#   address: 'smtp.gmail.com',
-#   port: 587,
-#   authentication: 'plain',
-#   user_name: 'sean.plays@gmail.com',
-#   password: 'd0ntb33vi1!',
-#   enable_starttls_auto: true
-# }
+ActionMailer::Base.smtp_settings = {
+  address: 'smtp.gmail.com',
+  port: 587,
+  authentication: 'plain',
+  user_name: 'sean.plays@gmail.com',
+  password: 'c4rd4m0m!',
+  enable_starttls_auto: true
+}
