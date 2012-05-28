@@ -16,6 +16,7 @@ end
 
 platforms :ruby do
   gem 'pg'
+  gem 'thin'
 end
 
 platforms :jruby do
