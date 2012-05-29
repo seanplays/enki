@@ -1,7 +1,7 @@
 # Configuration options for your blog - customise to taste
 # This file contains no secret information, so can be stored in source control (unlike database.yml)
 title: "hello,"
-url: http://sean.groknauts.com
+url: http://sodonnell.net
 author:
   name: "sean o'donnell"        # For copyright notice and ATOM feeds
   email: sean.plays@gmail.com    # Exception emails will go here, and it is used in ATOM feeds
