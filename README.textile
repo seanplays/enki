@@ -1,4 +1,4 @@
-h1. Enki
+h1. Enki!
 
 A Ruby on Rails blogging app for the fashionable developer.
 
