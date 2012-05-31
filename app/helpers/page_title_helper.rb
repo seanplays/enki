@@ -8,7 +8,7 @@ module PageTitleHelper
   end
 
   def archives_title
-    compose_title("Archives")
+    compose_title("what i did before.")
   end
 
   def page_title(page)
