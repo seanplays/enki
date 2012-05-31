@@ -1,6 +1,6 @@
 # Configuration options for your blog - customise to taste
 # This file contains no secret information, so can be stored in source control (unlike database.yml)
-title: "hello,"
+title: "hello, today i am"
 url: http://sodonnell.net
 author:
   name: "sean o'donnell"        # For copyright notice and ATOM feeds
