@@ -1,9 +1,10 @@
 module PageTitleHelper
   def posts_title(tag)
-    compose_title((tag || "").to_s.titleize)
+    title = @posts.first.title rescue nil # on the homepage, give us latest title
+    compose_title((tag || title || "").to_s.titleize)
   end
 
-  def post_title(post)
+  def post_title(post) 
     compose_title(post.title)
   end
 
