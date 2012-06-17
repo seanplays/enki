@@ -8,7 +8,7 @@ module PageTitleHelper
   end
 
   def archives_title
-    compose_title("what i did yesterday.")
+    compose_title("what i was yesterday")
   end
 
   def page_title(page)
@@ -26,6 +26,6 @@ module PageTitleHelper
   private
 
   def compose_title(*parts)
-    (parts << enki_config[:title]).reject(&:blank?).join(" - ")
+    (parts.unshift(enki_config[:title])).reject(&:blank?).join(" ").downcase+"."
   end
 end
