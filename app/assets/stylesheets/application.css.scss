@@ -22,6 +22,18 @@ body
   margin: 0px;
 }
 
+body.bg_default {
+	background-image: image-url("default.png");
+}
+
+body.bg_code {
+	background-image: image-url("graph.png");
+}
+
+body.bg_music {
+	background-image: image-url("staff.png");
+}
+
 #page_container
 {
   position: absolute;

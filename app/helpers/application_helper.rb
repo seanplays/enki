@@ -18,28 +18,32 @@ module ApplicationHelper
     }[error.first.to_s]
   end
   
-  def format_body_element
-    body = '<body>'
+  def body_background_class
+    body_class = default_class = 'bg_default'
+    code_class = 'bg_graph'
+    music_class = 'bg_staff'    
     if @posts
-      if @posts.first.tags.include?('code')
-        body = %Q@<body style="background-image: image-url(graph.png);">@
-      elsif @posts.first.tags.include?('music')
-        body = %Q@<body style="background-image: image-url(staff.png);">@        
+      tags = @posts.first.tags
+      if tags.detect{|tag| tag.name == 'code'}
+        body_class = code_class
+      elsif tags.detect{|tag| tag.name == 'music'}
+        body_class = music_class
       end
     elsif @post
-      if @posts.first.tags.include?('code')
-        body = %Q@<body style="background-image: image-url(graph.png);">@
-      elsif @posts.first.tags.include?('music')
-        body = %Q@<body style="background-image: image-url(staff.png);">@        
+      tags = @post.tags
+      if tags.detect{|tag| tag.name == 'code'}
+        body_class = code_class
+      elsif tags.detect{|tag| tag.name == 'music'}
+        body_class = music_class
       end      
     elsif @page
       if @page.slug == 'code'
-        body = %Q@<body style="background-image: image-url(graph.png);">@
+        body_class = code_class
       elsif @page.slug == 'music'
-        body = %Q@<body style="background-image: image-url(staff.png);">@        
+        body_class = music_class
       end
     end
-    body.html_safe
+    body_class
   end
   
 end
