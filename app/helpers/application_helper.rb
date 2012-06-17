@@ -17,4 +17,29 @@ module ApplicationHelper
       'base'   => error.last
     }[error.first.to_s]
   end
+  
+  def format_body_element
+    body = '<body>'
+    if @posts
+      if @posts.first.tags.include?('code')
+        body = %Q@<body style="background-image: image-url(graph.png);">@
+      elsif @posts.first.tags.include?('music')
+        body = %Q@<body style="background-image: image-url(staff.png);">@        
+      end
+    elsif @post
+      if @posts.first.tags.include?('code')
+        body = %Q@<body style="background-image: image-url(graph.png);">@
+      elsif @posts.first.tags.include?('music')
+        body = %Q@<body style="background-image: image-url(staff.png);">@        
+      end      
+    elsif @page
+      if @page.slug == 'code'
+        body = %Q@<body style="background-image: image-url(graph.png);">@
+      elsif @page.slug == 'music'
+        body = %Q@<body style="background-image: image-url(staff.png);">@        
+      end
+    end
+    body.html_safe
+  end
+  
 end
