@@ -23,7 +23,7 @@ body
 }
 
 body.bg_default {
-	background-image: image-url("default.png");
+	background-image: image-url("puzzle.png");
 }
 
 body.bg_graph {
@@ -33,6 +33,11 @@ body.bg_graph {
 body.bg_staff {
 	background-image: image-url("staff.png");
 }
+
+body.bg_maze {
+	background-image: image-url("maze.png");
+}
+
 
 #page_container
 {

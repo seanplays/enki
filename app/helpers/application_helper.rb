@@ -19,9 +19,10 @@ module ApplicationHelper
   end
   
   def body_background_class
-    body_class = default_class = 'bg_default'
+    body_class = default_class = 'bg_puzzle'
     code_class = 'bg_graph'
     music_class = 'bg_staff'    
+    archive_class = 'bg_maze'        
     if @posts
       tags = @posts.first.tags
       if tags.detect{|tag| tag.name == 'code'}
@@ -29,6 +30,8 @@ module ApplicationHelper
       elsif tags.detect{|tag| tag.name == 'music'}
         body_class = music_class
       end
+    elsif @months
+      body_class = archive_class
     elsif @post
       tags = @post.tags
       if tags.detect{|tag| tag.name == 'code'}
