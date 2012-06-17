@@ -145,10 +145,10 @@ img
 /* Two columns */
 #navigation
 {
-  position: absolute;
+  position: fixed;
   width: 15em;
-  top: -1px;
-  right: -1px;
+  top: 20px;
+  right: 100px;
 
   border: none;
   padding: 5px;
