@@ -17,36 +17,40 @@ module ApplicationHelper
       'base'   => error.last
     }[error.first.to_s]
   end
-  
+
   def body_background_class
-    body_class = default_class = 'bg_puzzle'
-    code_class = 'bg_graph'
-    music_class = 'bg_staff'    
-    archive_class = 'bg_maze'        
-    if @posts
-      tags = @posts.first.tags
-      if tags.detect{|tag| tag.name == 'code'}
-        body_class = code_class
-      elsif tags.detect{|tag| tag.name == 'music'}
-        body_class = music_class
-      end
-    elsif @months
-      body_class = archive_class
-    elsif @post
-      tags = @post.tags
-      if tags.detect{|tag| tag.name == 'code'}
-        body_class = code_class
-      elsif tags.detect{|tag| tag.name == 'music'}
-        body_class = music_class
-      end      
-    elsif @page
-      if @page.slug == 'code'
-        body_class = code_class
-      elsif @page.slug == 'music'
-        body_class = music_class
-      end
-    end
-    body_class
+    "bg_big_maze"
   end
+  
+  # def body_background_class
+  #   body_class = default_class = 'bg_puzzle'
+  #   code_class = 'bg_graph'
+  #   music_class = 'bg_staff'    
+  #   archive_class = 'bg_maze'        
+  #   if @posts
+  #     tags = @posts.first.tags
+  #     if tags.detect{|tag| tag.name == 'code'}
+  #       body_class = code_class
+  #     elsif tags.detect{|tag| tag.name == 'music'}
+  #       body_class = music_class
+  #     end
+  #   elsif @months
+  #     body_class = archive_class
+  #   elsif @post
+  #     tags = @post.tags
+  #     if tags.detect{|tag| tag.name == 'code'}
+  #       body_class = code_class
+  #     elsif tags.detect{|tag| tag.name == 'music'}
+  #       body_class = music_class
+  #     end      
+  #   elsif @page
+  #     if @page.slug == 'code'
+  #       body_class = code_class
+  #     elsif @page.slug == 'music'
+  #       body_class = music_class
+  #     end
+  #   end
+  #   body_class
+  # end
   
 end
