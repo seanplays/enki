@@ -143,13 +143,16 @@ img
 }
 
 /* Two columns */
+#navigation_container {
+	position: absolute;
+	top: 20px;
+  right: 200px;
+}
+
 #navigation
 {
-  float: right;
   position: fixed;
   width: 15em;
-  top: 20px;
-  right: 100px;
 
   border: none;
   padding: 5px;
