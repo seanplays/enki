@@ -22,6 +22,10 @@ module ApplicationHelper
     "bg_big_maze"
   end
   
+  def body_background_styles
+    "background-position: #{rand(100).round}% #{rand(100).round}%"
+  end
+  
   # def body_background_class
   #   body_class = default_class = 'bg_puzzle'
   #   code_class = 'bg_graph'
