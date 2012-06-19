@@ -15,7 +15,7 @@ Enki::Application.routes.draw do
     root :to => 'dashboard#show'
   end
 
-  resources :archives, :only => [:index]
+  resources :yesterday, :controller => 'archives', :action => 'index', :only => [:index]
   resources :pages, :only => [:show]
 
   constraints :year => /\d{4}/, :month => /\d{2}/, :day => /\d{2}/ do

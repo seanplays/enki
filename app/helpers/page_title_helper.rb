@@ -1,7 +1,6 @@
 module PageTitleHelper
   def posts_title(tag)
-    title = @posts.first.title rescue nil # on the homepage, give us latest title
-    compose_title((tag || title || "").to_s.titleize)
+    compose_title((tag || "").to_s.titleize)
   end
 
   def post_title(post) 
@@ -9,7 +8,7 @@ module PageTitleHelper
   end
 
   def archives_title
-    compose_title("what i was yesterday")
+    compose_title("yesterday")
   end
 
   def page_title(page)
@@ -17,10 +16,19 @@ module PageTitleHelper
   end
 
   def html_title(content)
-    if content.present?
-      content
-    else
-      enki_config[:title]
+    # if content.present?
+    #   content
+    # else
+    #   enki_config[:title]
+    # end
+    compose_title("sean o'donnell")
+  end
+
+  def html_subtitle(text, options = {})
+    unless text.blank?
+      html = %w{.}
+      html.unshift(link_to(text, posts_path(text), options))
+      return html.join.html_safe
     end
   end
 
