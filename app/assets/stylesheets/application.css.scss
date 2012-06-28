@@ -218,11 +218,14 @@ img
   padding-bottom: 40px;
 }
 
-dov.post {
-	background-color: #dadaff;
-	padding: 10px;
-	width: 90%;
-	
+div.post {
+	background-color: #fff;
+	padding: 15px;
+	opacity:0.4;
+}
+
+div.post h1, div.post .entrybody, div.post .meta {
+	opacity:0;
 }
 
 div.meta
