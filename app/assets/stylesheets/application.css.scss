@@ -54,7 +54,7 @@ body.bg_big_maze {
 }
 
 #content {
-	width: 750px;
+	width: 800px;
   margin: 5px auto;
 	position: relative;
 	padding-right: 55px;
@@ -222,6 +222,7 @@ div.post {
 	background: #fff; /* for browsers that don't understand the following rgba rule */
 	background-color: rgba(255,255,255,0.5);
 	padding: 15px;
+	margin-bottom: 25px;
 }
 
 div.meta
