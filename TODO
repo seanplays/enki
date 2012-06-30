@@ -5,3 +5,5 @@ git checkout production
 #do some code changes
 git commit -am "some desparate code changes to try fix heroku"
 git push heroku production:master
+
+-colors for different post categories
