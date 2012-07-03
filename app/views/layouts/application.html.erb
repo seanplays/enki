@@ -30,24 +30,24 @@
     <div id="content">
       <h1 id="page_heading"><a href="<%= root_url %>"><%= enki_config[:title] %></a> <%= html_subtitle(@subtitle, {:id => 'page_subheading'}) %></h1>
 			<div id="navigation_container">
-	      <div id="navigation">
-        <% unless category_links_for_navigation.empty? -%>
-          <h2>doing</h2>
-          <ul>
-            <% category_links_for_navigation.each do |link| -%>
-              <li><%= link_to(link.name, link.url) %></li>
-            <% end -%>
-          </ul>
-        <% end -%>		
+	      <div id="navigation">		
 	        <h2>being</h2>
 	        <ul>
 	          <% page_links_for_navigation.each do |link| -%>
 	            <li><%= link_to(link.name, link.url) %></li>
 	          <% end -%>
 	        </ul>
+	        <% unless category_links_for_navigation.empty? -%>
+	          <h2>doing</h2>
+	          <ul>
+	            <% category_links_for_navigation.each do |link| -%>
+	              <li><%= link_to(link.name, link.url) %></li>
+	            <% end -%>
+	          </ul>
+	        <% end -%>
 	        <form method="get" id="sform" action="http://www.google.com/search">
 	          <div>
-	            <h2><label for="q">searching</label></h2>
+	            <h2><label for="q">looking</label></h2>
 
 	            <input type="text" id="q" value="" name="q">
 	            <input type="hidden" name="sitesearch" value="<%= enki_config[:url] %>">
