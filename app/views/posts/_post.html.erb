@@ -1,3 +1,5 @@
+<div class="post post-<%= post.id %>" style="<%= format_post_styles(50) %>">
+	<div class="backgrounds <%= format_bg_class(post) %>"></div>
 <h2><%= link_to(post.title, post_path(post)) %></h2>
 <div class="entrybody">
   <%=raw post.body_html %>
@@ -10,4 +12,5 @@
     <li class="tags">Tagged <%= linked_tag_list(post.tags) %></li>
     <% end -%>
   </ul>
+</div>
 </div>

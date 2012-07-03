@@ -18,8 +18,22 @@ module PostsHelper
   end
   def format_post_styles(max_width)
     sides = %w{top right bottom left}
+    colors = %w{darkorange darkgreen darkblue}
+    rand_side = sides[rand(4).round]
+    rand_color = colors[rand(3).round]
+    color_match = nil  
     border_styles = sides.inject([]) do |styles, side| 
-      styles << "border-#{side}-width: #{rand(max_width).round}px" 
+      rand_width = "#{rand(max_width).round}px"    
+      if side.eql?(rand_side)
+        styles << "border-#{side}-color: #{rand_color}"
+        color_match = true
+      else 
+        if color_match == true
+          styles << "border-#{side}-color: #999"
+          color_match = false;          
+        end
+      end
+      styles << "border-#{side}-width: #{rand_width}" 
     end
     border_styles.join(";")
   end  

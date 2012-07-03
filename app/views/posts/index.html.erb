@@ -5,10 +5,7 @@
 	<p>there are no posts yet.</p>
 <% else -%>
 	<% @posts.each do |post| -%>
-	<div class="post post-<%= post.id %>" style="<%= format_post_styles(25) %>">
-		<div class="backgrounds <%= format_bg_class(post) %>"></div>
 	  <%= render :partial => 'post', :locals => {:post => post} %>
-	</div>
 	<% end -%>
   <% if more_content? -%>
     <div class="related">looking for more? head on over to the <%= link_to("yesterday", yesterday_index_path) %>.</div>
