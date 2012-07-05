@@ -153,13 +153,14 @@ img
 	position: absolute;
 	top: 20px;
   right: 190px;
+
 }
 
 #navigation
 {
   position: fixed;
-  width: 15em;
-
+  width: 150em;
+background-image: image-url("graph.png");
   border: none;
   padding: 5px;
 }
@@ -201,8 +202,9 @@ img
 #navigation input
 {
   border: solid 1px black;
-  width: 100%;
+  width: 15em;
 	margin-left: 10px;
+	display: block;
 }
 
 #navigation form
