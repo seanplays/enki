@@ -160,9 +160,11 @@ img
 {
   position: fixed;
   width: 150em;
-background-image: image-url("graph.png");
+	background-image: image-url("graph.png");
   border: none;
   padding: 5px;
+	padding-left: 125px;
+	margin-left: -125px;
 }
 
 #navigation h2
@@ -201,7 +203,7 @@ background-image: image-url("graph.png");
 
 #navigation input
 {
-  border: solid 1px black;
+  border: solid 1px #999;
   width: 15em;
 	margin-left: 10px;
 	display: block;
