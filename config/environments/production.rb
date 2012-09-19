@@ -9,7 +9,7 @@ Enki::Application.configure do
   config.action_controller.perform_caching = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
-  config.serve_static_assets = false
+  config.serve_static_assets = true
 
   # Compress JavaScripts and CSS
   config.assets.compress = true
@@ -47,6 +47,7 @@ Enki::Application.configure do
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   config.assets.precompile += %w( admin.css admin.js login.css )
+  config.assets.precompile += %w( flickrshow-7.2.min.js )
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
@@ -60,7 +61,10 @@ Enki::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
-
+  
+  # http://stackoverflow.com/questions/9159844/cache-get-miss: 
+  # Or you can tell rack/cache to shut up in your production.rb: 
+  config.action_dispatch.rack_cache[:verbose] = true
 end
 
 ActionMailer::Base.smtp_settings = {
