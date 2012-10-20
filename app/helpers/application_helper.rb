@@ -19,7 +19,7 @@ module ApplicationHelper
   end
 
   def body_background_class
-    "bg_big_maze"
+    "bg_big_graph"
   end
   
   def body_background_styles
